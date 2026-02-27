@@ -899,22 +899,28 @@
                 <div class="reveal stagger-2">
                     <div class="border-4 border-white p-8 sm:p-12 bg-white/5 backdrop-blur-sm">
                         <h3 class="font-display font-bold text-3xl mb-6">Ready to Start?</h3>
-                        <form class="space-y-6">
+                        <form id="contact-form" action="https://formspree.io/f/xojnbvnn" method="POST" class="space-y-6">
                             <div>
                                 <label class="block text-sm font-bold uppercase tracking-wider mb-2">Name</label>
-                                <input type="text" class="w-full bg-transparent border-2 border-white/30 p-4 focus:border-neo-accent focus:outline-none transition-colors text-white placeholder-gray-500" placeholder="Your Name">
+                                <input type="text" name="name" required minlength="2" class="w-full bg-transparent border-2 border-white/30 p-4 focus:border-neo-accent focus:outline-none transition-colors text-white placeholder-gray-500" placeholder="Your Name">
                             </div>
                             <div>
                                 <label class="block text-sm font-bold uppercase tracking-wider mb-2">Email</label>
-                                <input type="email" class="w-full bg-transparent border-2 border-white/30 p-4 focus:border-neo-accent focus:outline-none transition-colors text-white placeholder-gray-500" placeholder="your@email.com">
+                                <input type="email" name="email" required class="w-full bg-transparent border-2 border-white/30 p-4 focus:border-neo-accent focus:outline-none transition-colors text-white placeholder-gray-500" placeholder="your@email.com">
                             </div>
                             <div>
                                 <label class="block text-sm font-bold uppercase tracking-wider mb-2">Message</label>
-                                <textarea rows="4" class="w-full bg-transparent border-2 border-white/30 p-4 focus:border-neo-accent focus:outline-none transition-colors text-white placeholder-gray-500 resize-none" placeholder="Tell me about your project..."></textarea>
+                                <textarea name="message" rows="4" required minlength="10" class="w-full bg-transparent border-2 border-white/30 p-4 focus:border-neo-accent focus:outline-none transition-colors text-white placeholder-gray-500 resize-none" placeholder="Tell me about your project..."></textarea>
                             </div>
                             <button type="submit" class="w-full bg-neo-accent text-white font-bold uppercase tracking-wider py-4 border-2 border-neo-accent hover:bg-transparent transition-all">
                                 Send Message
                             </button>
+                            <p id="form-success-message" class="text-green-400 font-bold opacity-0 transition-opacity duration-500">
+                                ✅ Got your message! I'll respond as soon as possible.
+                            </p>
+                            <p id="form-error-message" class="text-red-400 font-bold opacity-0 transition-opacity duration-500">
+                                ⚠️ Hmm… that didn't work. Give it another shot?
+                            </p>
                         </form>
                     </div>
                 </div>
@@ -1002,6 +1008,35 @@
                 nav.classList.add('shadow-lg');
             } else {
                 nav.classList.remove('shadow-lg');
+            }
+        });
+
+        // Contact form submission
+        const form = document.getElementById("contact-form");
+        const messageOk = document.getElementById("form-success-message");
+        const messageErr = document.getElementById("form-error-message");
+
+        form.addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+
+            try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                form.reset();
+                messageOk.classList.remove("opacity-0");
+            } else {
+                messageErr.classList.remove("opacity-0");
+            }
+            } catch (error) {
+            alert("Error submitting form.");
             }
         });
     </script>
