@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rachit Patel | Technical Project Manager & Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%23ff6b35%22></rect><path fill=%22%23ffffff%22 d=%22M19.52 66.17L12.87 66.17L12.87 33.82L34.82 33.82Q38.57 33.82 41.35 34.85Q44.12 35.88 45.67 38.05Q47.22 40.22 47.22 43.63L47.22 43.63Q47.22 45.92 46.42 47.52Q45.62 49.13 44.20 50.13Q42.77 51.13 40.92 51.65Q39.07 52.17 36.97 52.32L36.97 52.32L36.27 51.92Q39.77 51.97 42.02 52.50Q44.27 53.02 45.40 54.40Q46.52 55.77 46.52 58.47L46.52 58.47L46.52 66.17L39.87 66.17L39.87 58.92Q39.87 57.07 39.22 56.05Q38.57 55.02 36.90 54.63Q35.22 54.22 32.07 54.22L32.07 54.22L19.52 54.22L19.52 66.17ZM19.52 39.52L19.52 49.02L34.82 49.02Q37.62 49.02 39.10 47.67Q40.57 46.32 40.57 44.02L40.57 44.02Q40.57 41.82 39.10 40.67Q37.62 39.52 34.82 39.52L34.82 39.52L19.52 39.52ZM74.13 55.67L59.92 55.67L59.92 50.38L74.72 50.38Q77.38 50.38 78.92 48.95Q80.47 47.52 80.47 44.97L80.47 44.97Q80.47 42.32 78.92 40.92Q77.38 39.52 74.72 39.52L74.72 39.52L60.72 39.52L60.72 66.17L54.07 66.17L54.07 33.82L74.13 33.82Q76.82 33.82 79.20 34.47Q81.57 35.13 83.35 36.47Q85.13 37.82 86.13 39.92Q87.13 42.02 87.13 44.97L87.13 44.97Q87.13 47.88 86.13 49.92Q85.13 51.97 83.35 53.25Q81.57 54.52 79.20 55.10Q76.82 55.67 74.13 55.67L74.13 55.67Z%22></path></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                    },
+                    colors: {
+                        neo: {
+                            black: '#0a0a0a',
+                            white: '#fafafa',
+                            accent: '#ff6b35',
+                            secondary: '#004e89',
+                            muted: '#6b7280',
+                            border: '#1a1a1a',
+                        }
+                    },
+                    animation: {
+                        'marquee': 'marquee 25s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                        'slide-in-right': 'slideInRight 0.8s ease-out forwards',
+                        'scale-in': 'scaleIn 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(60px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(60px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.9)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Neobrutalist specific styles */
+        .neo-border {
+            border: 3px solid #0a0a0a;
+            box-shadow: 6px 6px 0px 0px #0a0a0a;
+            transition: all 0.2s ease;
+        }
+        
+        .neo-border:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 8px 8px 0px 0px #0a0a0a;
+        }
+        
+        .neo-border:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px 0px #0a0a0a;
+        }
+        
+        .neo-card {
+            border: 3px solid #0a0a0a;
+            background: white;
+            position: relative;
+        }
+        
+        .neo-card::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            right: -6px;
+            bottom: -6px;
+            background: #0a0a0a;
+            z-index: -1;
+        }
+        
+        .neo-button {
+            border: 3px solid #0a0a0a;
+            background: #ff6b35;
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: 4px 4px 0px 0px #0a0a0a;
+            transition: all 0.2s ease;
+        }
+        
+        .neo-button:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px 0px #0a0a0a;
+        }
+        
+        .neo-button:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px #0a0a0a;
+        }
+        
+        .neo-button-secondary {
+            background: white;
+            color: #0a0a0a;
+        }
+        
+        .neo-button-secondary:hover {
+            background: #fafafa;
+        }
+        
+        .grain {
+            position: relative;
+        }
+        
+        .grain::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        
+        .text-stroke {
+            -webkit-text-stroke: 2px #0a0a0a;
+            color: transparent;
+        }
+        
+        .text-stroke-white {
+            -webkit-text-stroke: 2px white;
+            color: transparent;
+        }
+        
+        .clip-slant {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #fafafa;
+            border-left: 3px solid #0a0a0a;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #0a0a0a;
+            border: 2px solid #fafafa;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff6b35;
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        
+        .skill-tag {
+            border: 2px solid #0a0a0a;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            background: #ff6b35;
+            color: white;
+            transform: rotate(-2deg) scale(1.05);
+        }
+        
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #0a0a0a;
+        }
+        
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: #ff6b35;
+            border: 4px solid #0a0a0a;
+            border-radius: 50%;
+            position: absolute;
+            left: 16px;
+            z-index: 10;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 16px;
+            }
+            .timeline-dot {
+                left: 8px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#fafafa] text-neo-black font-sans overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-[#fafafa]/95 backdrop-blur-sm border-b-4 border-neo-black z-50 px-4 sm:px-6 lg:px-12 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="font-display font-bold text-2xl tracking-tighter hover:text-neo-accent transition-colors">
+                RACHIT<span class="text-neo-accent">.</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="font-bold text-sm uppercase tracking-wider hover:text-neo-accent transition-colors relative group">
+                    About
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neo-accent transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#experience" class="font-bold text-sm uppercase tracking-wider hover:text-neo-accent transition-colors relative group">
+                    Experience
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neo-accent transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#skills" class="font-bold text-sm uppercase tracking-wider hover:text-neo-accent transition-colors relative group">
+                    Skills
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neo-accent transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#education" class="font-bold text-sm uppercase tracking-wider hover:text-neo-accent transition-colors relative group">
+                    Education
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neo-accent transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#contact" class="neo-button px-6 py-2 text-sm">
+                    Contact Me
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden neo-border p-2 bg-white">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-[#fafafa] border-b-4 border-neo-black">
+            <div class="flex flex-col p-6 gap-4">
+                <a href="#about" class="font-bold text-lg uppercase border-b-2 border-neo-black pb-2">About</a>
+                <a href="#experience" class="font-bold text-lg uppercase border-b-2 border-neo-black pb-2">Experience</a>
+                <a href="#skills" class="font-bold text-lg uppercase border-b-2 border-neo-black pb-2">Skills</a>
+                <a href="#education" class="font-bold text-lg uppercase border-b-2 border-neo-black pb-2">Education</a>
+                <a href="#contact" class="neo-button px-6 py-3 text-center mt-2">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden grain">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-20 left-10 w-64 h-64 bg-neo-accent/10 rounded-full blur-3xl animate-float"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-neo-secondary/10 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+        </div>
+
+        <!-- Grid Pattern -->
+        <div class="absolute inset-0 z-0 opacity-5" style="background-image: radial-gradient(#0a0a0a 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-20 grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="space-y-8 animate-slide-up">
+                <div class="inline-flex items-center gap-2 neo-border px-4 py-2 bg-white">
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                    <span class="font-bold text-sm uppercase tracking-wider">Available for Opportunities</span>
+                </div>
+                
+                <h1 class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.9] tracking-tight">
+                    TECHNICAL<br>
+                    <span class="text-stroke">PROJECT</span><br>
+                    <span class="text-neo-accent">MANAGER</span>
+                </h1>
+                
+                <p class="text-xl sm:text-2xl font-medium text-neo-muted max-w-lg leading-relaxed">
+                    Orchestrating complex software development with 6+ years of expertise in Python, React, AWS, and AI-driven solutions.
+                </p>
+                
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#experience" class="neo-button px-8 py-4 text-lg">
+                        View Experience
+                    </a>
+                    <a href="#contact" class="neo-button neo-button-secondary px-8 py-4 text-lg">
+                        Get In Touch
+                    </a>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-6 pt-8 border-t-4 border-neo-black">
+                    <div>
+                        <div class="font-display font-bold text-4xl text-neo-accent">6+</div>
+                        <div class="font-bold text-sm uppercase mt-1">Years Exp.</div>
+                    </div>
+                    <div>
+                        <div class="font-display font-bold text-4xl text-neo-secondary">10+</div>
+                        <div class="font-bold text-sm uppercase mt-1">Team Size</div>
+                    </div>
+                    <div>
+                        <div class="font-display font-bold text-4xl">6+</div>
+                        <div class="font-bold text-sm uppercase mt-1">Domains</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Visual -->
+            <div class="relative animate-slide-in-right hidden lg:block">
+                <div class="neo-card p-8 bg-white relative z-10">
+                    <div class="aspect-square bg-gradient-to-br from-neo-accent to-neo-secondary relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-white font-display font-bold text-9xl opacity-20">RP</div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 bg-neo-black text-white">
+                            <div class="font-display font-bold text-2xl">Rachit Patel</div>
+                            <div class="text-sm uppercase tracking-wider opacity-80">Manager • Leader • Full Stack</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Decorative Elements -->
+                <div class="absolute -top-4 -right-4 w-24 h-24 bg-neo-accent neo-border z-20 flex items-center justify-center">
+                    <i data-lucide="code-2" class="w-12 h-12 text-white"></i>
+                </div>
+                <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-neo-secondary neo-border z-0"></div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="neo-border p-2 bg-white">
+                <i data-lucide="arrow-down" class="w-6 h-6"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <div class="bg-neo-black text-white py-4 overflow-hidden border-y-4 border-neo-black">
+        <div class="flex whitespace-nowrap animate-marquee">
+            <span class="text-2xl font-display font-bold mx-8">PYTHON</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">REACT.JS</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AWS</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">DJANGO</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AI/ML</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AGILE</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">PYTHON</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">REACT.JS</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AWS</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">DJANGO</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AI/ML</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AGILE</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">PYTHON</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">REACT.JS</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AWS</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">DJANGO</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AI/ML</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AGILE</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">PYTHON</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">REACT.JS</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AWS</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">DJANGO</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AI/ML</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AGILE</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">PYTHON</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">REACT.JS</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AWS</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">DJANGO</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AI/ML</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AGILE</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">PYTHON</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">REACT.JS</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AWS</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">DJANGO</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AI/ML</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AGILE</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">PYTHON</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">REACT.JS</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AWS</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">DJANGO</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AI/ML</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+            <span class="text-2xl font-display font-bold mx-8">AGILE</span>
+            <span class="text-2xl font-display font-bold mx-8 text-neo-accent">•</span>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-12 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <!-- Section Header -->
+                <div class="lg:col-span-4 reveal">
+                    <div class="sticky top-32">
+                        <div class="neo-border inline-block px-4 py-2 bg-white mb-6">
+                            <span class="font-bold text-sm uppercase tracking-wider text-neo-accent">01</span>
+                        </div>
+                        <h2 class="font-display font-bold text-5xl lg:text-6xl mb-6 leading-tight">
+                            ABOUT<br>MYSELF
+                        </h2>
+                        <div class="w-24 h-2 bg-neo-accent neo-border"></div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="lg:col-span-8 space-y-8">
+                    <div class="neo-card p-8 reveal stagger-1">
+                        <p class="text-xl leading-relaxed text-white mb-6">
+                            I'm <strong class="text-neo-accent">Rachit Patel</strong>, a Technical Project Manager with nearly 6 years of progressive experience in software development. My journey began as a backend developer specializing in Python, evolving through full-stack development to team leadership, and now orchestrating complex technical projects at the strategic level.
+                        </p>
+                        <p class="text-lg leading-relaxed text-neo-muted">
+                            I bridge the gap between technical execution and business objectives, leading cross-functional teams across diverse domains including AI, healthcare, entertainment, fitness, construction, and event management.
+                        </p>
+                    </div>
+
+                    <!-- Journey Cards -->
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="neo-card p-6 reveal stagger-2 hover:transform hover:-translate-y-1 transition-transform">
+                            <div class="w-12 h-12 bg-neo-accent neo-border flex items-center justify-center mb-4">
+                                <i data-lucide="server" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl text-white mb-2">Backend Foundation</h3>
+                            <p class="text-sm text-neo-muted">Started with Python, Django, REST APIs, MySQL, PostgreSQL, AWS, Stripe, and Twilio.</p>
+                        </div>
+
+                        <div class="neo-card p-6 reveal stagger-3 hover:transform hover:-translate-y-1 transition-transform">
+                            <div class="w-12 h-12 bg-neo-secondary neo-border flex items-center justify-center mb-4">
+                                <i data-lucide="layout" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl text-white mb-2">Full Stack Expansion</h3>
+                            <p class="text-sm text-neo-muted">Mastered React.js, Redux, Hooks, Axios, Tailwind CSS, and MUI.</p>
+                        </div>
+
+                        <div class="neo-card p-6 reveal stagger-4 hover:transform hover:-translate-y-1 transition-transform">
+                            <div class="w-12 h-12 bg-purple-600 neo-border flex items-center justify-center mb-4">
+                                <i data-lucide="users" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl text-white mb-2">Team Leadership</h3>
+                            <p class="text-sm text-neo-muted">Led 10+ engineers, conducted code reviews, mentored juniors, and managed client communications.</p>
+                        </div>
+
+                        <div class="neo-card p-6 reveal stagger-4 hover:transform hover:-translate-y-1 transition-transform">
+                            <div class="w-12 h-12 bg-green-600 neo-border flex items-center justify-center mb-4">
+                                <i data-lucide="briefcase" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl text-white mb-2">Project Management</h3>
+                            <p class="text-sm text-neo-muted">Full-time TPM focusing on Agile methodologies, stakeholder management, and digital transformation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 px-4 sm:px-6 lg:px-12 bg-white relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="neo-border inline-block px-4 py-2 bg-[#fafafa] mb-6">
+                    <span class="font-bold text-sm uppercase tracking-wider text-neo-accent">02</span>
+                </div>
+                <h2 class="font-display font-bold text-5xl lg:text-6xl mb-4">PROFESSIONAL<br>JOURNEY</h2>
+                <div class="w-24 h-2 bg-neo-accent neo-border mx-auto"></div>
+            </div>
+
+            <div class="relative max-w-4xl mx-auto">
+                <div class="timeline-line"></div>
+
+                <!-- Job 1 -->
+                <div class="relative pl-16 sm:pl-24 pb-16 reveal">
+                    <div class="timeline-dot top-2"></div>
+                    <div class="neo-card p-6 sm:p-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-6">
+                            <div>
+                                <h3 class="font-display font-bold text-2xl sm:text-3xl mb-1">Technical Project Manager</h3>
+                                <div class="flex items-center gap-2 text-neo-accent font-bold">
+                                    <i data-lucide="building-2" class="w-4 h-4"></i>
+                                    Synchronized Codelab
+                                </div>
+                            </div>
+                            <div class="neo-border px-3 py-1 bg-[#fafafa] inline-flex items-center gap-2 self-start">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                                <span class="font-bold text-sm">Aug 2024 - Present</span>
+                            </div>
+                        </div>
+                        
+                        <ul class="space-y-3">
+                            <li class="flex gap-3">
+                                <span class="w-2 h-2 bg-neo-accent rounded-full mt-2 flex-shrink-0"></span>
+                                <span class="text-neo-muted leading-relaxed">Orchestrated complex software development projects, serving as the key mediator between technical teams, stakeholders, and business objectives to ensure seamless alignment and efficient resource utilization.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="w-2 h-2 bg-neo-accent rounded-full mt-2 flex-shrink-0"></span>
+                                <span class="text-neo-muted leading-relaxed">Developed actionable project plans from technical requirements, applying Agile strategies to enhance team productivity and deliver solutions that drive digital transformation.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="w-2 h-2 bg-neo-accent rounded-full mt-2 flex-shrink-0"></span>
+                                <span class="text-neo-muted leading-relaxed">Managed project budgets, timelines, and resource allocations, mitigating risks and resolving technical issues proactively to achieve on-time, high-quality outcomes.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="w-2 h-2 bg-neo-accent rounded-full mt-2 flex-shrink-0"></span>
+                                <span class="text-neo-muted leading-relaxed">Built collaborative environments by bridging technical and non-technical stakeholders, promoting open communication and turning innovative ideas into tangible business results.</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">Agile</span>
+                            <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">Risk Management</span>
+                            <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">Stakeholder Management</span>
+                            <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">Budgeting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="relative pl-16 sm:pl-24 pb-16 reveal">
+                    <div class="timeline-dot top-2 bg-neo-secondary"></div>
+                    <div class="neo-card p-6 sm:p-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-6">
+                            <div>
+                                <h3 class="font-display font-bold text-2xl sm:text-3xl mb-1">Team Lead</h3>
+                                <div class="flex items-center gap-2 text-neo-secondary font-bold">
+                                    <i data-lucide="building-2" class="w-4 h-4"></i>
+                                    Citrusbug Technolabs
+                                </div>
+                            </div>
+                            <div class="neo-border px-3 py-1 bg-[#fafafa] inline-flex items-center gap-2 self-start">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                                <span class="font-bold text-sm">Aug 2022 - Jul 2024</span>
+                            </div>
+                        </div>
+                        
+                        <ul class="space-y-3">
+                            <li class="flex gap-3">
+                                <span class="w-2 h-2 bg-neo-secondary rounded-full mt-2 flex-shrink-0"></span>
+                                <span class="text-neo-muted leading-relaxed">Led and mentored a cross-functional team of over 10 software engineers across web and mobile app projects in diverse domains including AI, healthcare, entertainment, fitness, construction, and event management.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="w-2 h-2 bg-neo-secondary rounded-full mt-2 flex-shrink-0"></span>
+                                <span class="text-neo-muted leading-relaxed">Applied Agile methodologies that boosted team productivity, streamlined development processes, and ensured successful project delivery from ideation to deployment.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="w-2 h-2 bg-neo-secondary rounded-full mt-2 flex-shrink-0"></span>
+                                <span class="text-neo-muted leading-relaxed">Crafted strategic technical roadmaps aligned with business objectives, incorporating smart technology choices, architecture design, and process enhancements to foster innovation.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="w-2 h-2 bg-neo-secondary rounded-full mt-2 flex-shrink-0"></span>
+                                <span class="text-neo-muted leading-relaxed">Managed client communications, code reviews, and junior mentoring, growing a culture of collaboration, continuous learning, and excellence in high-performance teams.</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">Team Leadership</span>
+                            <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">Mentoring</span>
+                            <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">Code Review</span>
+                            <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">Client Communication</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="relative pl-16 sm:pl-24 reveal">
+                    <div class="timeline-dot top-2 bg-purple-600"></div>
+                    <div class="neo-card p-6 sm:p-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-6">
+                            <div>
+                                <h3 class="font-display font-bold text-2xl sm:text-3xl mb-1">Senior Software Engineer</h3>
+                                <div class="flex items-center gap-2 text-purple-600 font-bold">
+                                    <i data-lucide="building-2" class="w-4 h-4"></i>
+                                    Citrusbug Technolabs
+                                </div>
+                            </div>
+                            <div class="neo-border px-3 py-1 bg-[#fafafa] inline-flex items-center gap-2 self-start">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                                <span class="font-bold text-sm">Mar 2021 - Aug 2022</span>
+                            </div>
+                        </div>
+                        
+                        <ul class="space-y-3">
+                            <li class="flex gap-3">
+                                <span class="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+                                <span class="text-neo-muted leading-relaxed">Initiated the design and implementation of enterprise-level software applications using Python, Django, REST APIs, React.js, Redux, and AWS, focusing on scalability and performance.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+                                <span class="text-neo-muted leading-relaxed">Mentored junior developers with technical guidance, suggesting best practices in code reviews, Agile methodologies, and efficient coding to elevate team skills and output.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+                                <span class="text-neo-muted leading-relaxed">Enhanced existing systems to improve performance, scalability, and code quality, collaborating with product managers to translate business requirements into effective technical solutions.</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">Python</span>
+                            <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">Django</span>
+                            <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">React.js</span>
+                            <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">AWS</span>
+                            <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">System Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-4 sm:px-6 lg:px-12 bg-[#fafafa] relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-neo-accent/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-neo-secondary/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <div class="reveal">
+                    <div class="neo-border inline-block px-4 py-2 bg-white mb-6">
+                        <span class="font-bold text-sm uppercase tracking-wider text-neo-accent">03</span>
+                    </div>
+                    <h2 class="font-display font-bold text-5xl lg:text-6xl mb-6">SKILLS &<br>EXPERTISE</h2>
+                    <div class="w-24 h-2 bg-neo-accent neo-border mb-8"></div>
+                    <p class="text-xl text-neo-muted leading-relaxed mb-8">
+                        A comprehensive toolkit built over 6 years of hands-on development and leadership experience, spanning technical architecture to strategic project management.
+                    </p>
+                    
+                    <div class="neo-card p-6 bg-neo-black text-white">
+                        <h3 class="font-display font-bold text-2xl mb-4 flex items-center gap-3">
+                            <i data-lucide="zap" class="w-6 h-6 text-neo-accent"></i>
+                            Core Competencies
+                        </h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 bg-neo-accent rounded-full"></div>
+                                <span class="font-bold">Technical Architecture</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 bg-neo-accent rounded-full"></div>
+                                <span class="font-bold">Agile Leadership</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 bg-neo-accent rounded-full"></div>
+                                <span class="font-bold">Cross-functional Teams</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 bg-neo-accent rounded-full"></div>
+                                <span class="font-bold">Digital Transformation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Management Skills -->
+                    <div class="neo-card p-6 reveal stagger-1">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-neo-accent neo-border flex items-center justify-center">
+                                <i data-lucide="kanban" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-white text-xl">Management</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Project Management</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Agile Methodologies</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Scrum</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Stakeholder Management</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Risk Management</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">SDLC</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Budget Management</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Change Management</span>
+                        </div>
+                    </div>
+
+                    <!-- Technical Skills -->
+                    <div class="neo-card p-6 reveal stagger-2">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-neo-secondary neo-border flex items-center justify-center">
+                                <i data-lucide="code" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-white text-xl">Technical</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Python</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">React.js</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">AWS</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Django</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Cloud Computing</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">DevOps</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">REST APIs</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">AI/ML</span>
+                        </div>
+                    </div>
+
+                    <!-- Leadership Skills -->
+                    <div class="neo-card p-6 reveal stagger-3">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-purple-600 neo-border flex items-center justify-center">
+                                <i data-lucide="users" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-white text-xl">Leadership</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Cross-functional Leadership</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Team Mentoring</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Code Reviews</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Client Communication</span>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="neo-card p-6 reveal stagger-4">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-green-600 neo-border flex items-center justify-center">
+                                <i data-lucide="brain" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-white text-xl">Strategic</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Problem Solving</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Strong Communication</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Strategic Planning</span>
+                            <span class="skill-tag px-3 py-2 text-sm font-bold">Innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-24 px-4 sm:px-6 lg:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="neo-border inline-block px-4 py-2 bg-[#fafafa] mb-6">
+                    <span class="font-bold text-sm uppercase tracking-wider text-neo-accent">04</span>
+                </div>
+                <h2 class="font-display font-bold text-5xl lg:text-6xl mb-4">EDUCATION</h2>
+                <div class="w-24 h-2 bg-neo-accent neo-border mx-auto"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="neo-card p-8 sm:p-12 reveal">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="md:col-span-1">
+                            <div class="neo-border p-6 bg-neo-accent text-white text-center h-full flex flex-col justify-center">
+                                <i data-lucide="graduation-cap" class="w-16 h-16 mx-auto mb-4"></i>
+                                <div class="font-display font-bold text-4xl mb-2">8.0</div>
+                                <div class="text-sm uppercase tracking-wider opacity-90">CGPA</div>
+                                <div class="mt-4 pt-4 border-t-2 border-white/30">
+                                    <div class="font-bold">2015 - 2019</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="md:col-span-2 space-y-6">
+                            <div>
+                                <h3 class="font-display font-bold text-white text-3xl mb-2">Bachelor of Engineering</h3>
+                                <div class="flex items-center gap-2 text-neo-accent font-bold text-lg">
+                                    <i data-lucide="school" class="w-5 h-5"></i>
+                                    Government Engineering College, Gandhinagar
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-4 text-neo-muted leading-relaxed">
+                                <p>
+                                    Completed Bachelor of Engineering degree in <strong class="text-neo-accent">Computer Engineering</strong> with a strong foundation in computer science principles, software development, and engineering practices.
+                                </p>
+                                <p>
+                                    Coursework included advanced topics in programming, algorithms, database management, and machine learning, providing the technical skills and knowledge to excel in the field of computer engineering.
+                                </p>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 pt-4">
+                                <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">Computer Engineering</span>
+                                <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">Algorithms</span>
+                                <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">Database Management</span>
+                                <span class="skill-tag px-3 py-1 text-xs font-bold uppercase">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-12 bg-neo-black text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0" style="background-image: radial-gradient(#ff6b35 1px, transparent 1px); background-size: 40px 40px;"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <div class="inline-block px-4 py-2 border-2 border-neo-accent mb-6">
+                        <span class="font-bold text-sm uppercase tracking-wider text-neo-accent">05</span>
+                    </div>
+                    <h2 class="font-display font-bold text-5xl lg:text-6xl mb-6">LET'S WORK<br>TOGETHER</h2>
+                    <p class="text-xl text-gray-400 leading-relaxed mb-8">
+                        Looking for a Technical Project Manager who can bridge the gap between complex technical requirements and business objectives? Let's discuss how I can drive your next project to success.
+                    </p>
+
+                    <div class="space-y-6">
+                        <a href="mailto:patelrachit5851@gmail.com" class="flex items-center gap-4 group">
+                            <div class="w-14 h-14 border-2 border-white flex items-center justify-center group-hover:bg-neo-accent group-hover:border-neo-accent transition-all">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 uppercase tracking-wider">Email</div>
+                                <div class="font-bold text-xl group-hover:text-neo-accent transition-colors">patelrachit5851@gmail.com</div>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/rachit-patel-tpm/" target="_blank" class="flex items-center gap-4 group">
+                            <div class="w-14 h-14 border-2 border-white flex items-center justify-center group-hover:bg-neo-accent group-hover:border-neo-accent transition-all">
+                                <i data-lucide="linkedin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 uppercase tracking-wider">LinkedIn</div>
+                                <div class="font-bold text-xl group-hover:text-neo-accent transition-colors">linkedin.com/in/rachit-patel-tpm</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="reveal stagger-2">
+                    <div class="border-4 border-white p-8 sm:p-12 bg-white/5 backdrop-blur-sm">
+                        <h3 class="font-display font-bold text-3xl mb-6">Ready to Start?</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-bold uppercase tracking-wider mb-2">Name</label>
+                                <input type="text" class="w-full bg-transparent border-2 border-white/30 p-4 focus:border-neo-accent focus:outline-none transition-colors text-white placeholder-gray-500" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold uppercase tracking-wider mb-2">Email</label>
+                                <input type="email" class="w-full bg-transparent border-2 border-white/30 p-4 focus:border-neo-accent focus:outline-none transition-colors text-white placeholder-gray-500" placeholder="your@email.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold uppercase tracking-wider mb-2">Message</label>
+                                <textarea rows="4" class="w-full bg-transparent border-2 border-white/30 p-4 focus:border-neo-accent focus:outline-none transition-colors text-white placeholder-gray-500 resize-none" placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-neo-accent text-white font-bold uppercase tracking-wider py-4 border-2 border-neo-accent hover:bg-transparent transition-all">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#fafafa] border-t-4 border-neo-black py-12 px-4 sm:px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="font-display font-bold text-2xl tracking-tighter">
+                RACHIT<span class="text-neo-accent">.</span>
+            </div>
+            
+            <div class="flex gap-8">
+                <a href="#about" class="font-bold text-sm uppercase hover:text-neo-accent transition-colors">About</a>
+                <a href="#experience" class="font-bold text-sm uppercase hover:text-neo-accent transition-colors">Experience</a>
+                <a href="#skills" class="font-bold text-sm uppercase hover:text-neo-accent transition-colors">Skills</a>
+                <a href="#contact" class="font-bold text-sm uppercase hover:text-neo-accent transition-colors">Contact</a>
+            </div>
+
+            <div class="text-sm text-neo-muted font-bold">
+                &copy; <span id="year"></span> Rachit Patel. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Fetch & display current year
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Scroll reveal animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
