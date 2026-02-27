@@ -915,11 +915,8 @@
                             <button type="submit" class="w-full bg-neo-accent text-white font-bold uppercase tracking-wider py-4 border-2 border-neo-accent hover:bg-transparent transition-all">
                                 Send Message
                             </button>
-                            <p id="form-success-message" class="text-green-400 font-bold opacity-0 transition-opacity duration-500">
-                                ✅ Got your message! I'll respond as soon as possible.
-                            </p>
-                            <p id="form-error-message" class="text-red-400 font-bold opacity-0 transition-opacity duration-500">
-                                ⚠️ Hmm… that didn't work. Give it another shot?
+                            <p id="form-message"
+                                class="opacity-0 transition-opacity duration-500 font-bold mt-4">
                             </p>
                         </form>
                     </div>
@@ -1013,8 +1010,23 @@
 
         // Contact form submission
         const form = document.getElementById("contact-form");
-        const messageOk = document.getElementById("form-success-message");
-        const messageErr = document.getElementById("form-error-message");
+        const message = document.getElementById("form-message");
+
+        function showMessage(text, colorClass) {
+            message.textContent = text;
+            message.className =
+                `transition-opacity duration-500 font-bold mt-4 ${colorClass}`;
+            
+            // Fade in
+            message.classList.remove("opacity-0");
+            message.classList.add("opacity-100");
+
+            // After 5 seconds → fade out
+            setTimeout(() => {
+                message.classList.remove("opacity-100");
+                message.classList.add("opacity-0");
+            }, 5000);
+        }
 
         form.addEventListener("submit", async function(e) {
             e.preventDefault();
@@ -1031,9 +1043,9 @@
 
             if (response.ok) {
                 form.reset();
-                messageOk.classList.remove("opacity-0");
+                showMessage("✅ Got your message! I'll respond as soon as possible.", "text-green-400");
             } else {
-                messageErr.classList.remove("opacity-0");
+                showMessage("⚠️ Hmm… that didn't work. Give it another shot?", "text-red-400");
             }
             } catch (error) {
             alert("Error submitting form.");
